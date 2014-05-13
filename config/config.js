@@ -31,7 +31,7 @@ else {
   db = home + '/testnet';
   port = '3001';
   b_port = '18332';
-  p2p_port = '18333';
+  p2p_port = '18444';
 }
 
 
@@ -58,7 +58,7 @@ if (!dataDir) {
   if (isMac) dataDir = process.env.HOME + '/Library/Application Support/Bitcoin/';
   if (isLinux) dataDir = process.env.HOME + '/.bitcoin/';
 }
-dataDir += network === 'testnet' ? 'testnet3' : '';
+dataDir += network === 'testnet' ? 'regtest' : '';
 
 var safeConfirmations = process.env.INSIGHT_SAFE_CONFIRMATIONS || 6;
 var ignoreCache      = process.env.INSIGHT_IGNORE_CACHE || 0;
